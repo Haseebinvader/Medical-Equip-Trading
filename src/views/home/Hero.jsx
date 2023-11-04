@@ -4,7 +4,7 @@ import { Images } from "../../Data";
 
 const Hero = () => {
     return (
-        <Grid container xs={12} sx={{ backgroundImage: `url(${Images.Background})`, backgroundSize: "cover", backgroundAttachment: "fixed", height: '100vh' }}>
+        <Grid container xs={12} sx={{ backgroundImage: `url(${Images.Background})`, backgroundSize: "cover", backgroundAttachment: "fixed", height: '100vh'}}>
             <Box sx={{ backgroundColor: "rgba(0, 0, 0, 0.5)", position: "absolute", top: 0, right: 0, bottom: 0, left: 0, }} ></Box>
             <Navbar />
             <Grid item sx={{

@@ -1,7 +1,7 @@
-import { Box, Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } from "@mui/material"
+import { Box,  Grid, Typography } from "@mui/material"
 import { ConsumeableData, Images } from "../../Data"
 import { Link } from "react-router-dom";
-
+import './style.css'
 const Consumeable = () => {
     return (
         <Grid container sx={{ backgroundColor: '#F8F5F4', pt: '6rem', minHeight: '100vh', alignItems: 'center' }}>
@@ -11,52 +11,52 @@ const Consumeable = () => {
             <Box sx={{ width: '8rem', height: '2.5px', backgroundColor: 'orange', margin: '8px auto', textAlign: 'center' }} ></Box>
             <Grid container sx={{ display: 'flex', justifyContent: 'center', px: { xs: 2, sm: 4, md: 15 }, py: { xs: 2, sm: 4, md: 6 }, ml: '3rem' }}>
                 <Grid item xs={12} sm={6} md={4}>
-                    <Card sx={{ maxWidth: 345 }}>
-                        <CardMedia component="img" alt="Consumable 1" height="250" image={Images.consumable1} />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" sx={{ fontWeight: '600' }}>{ConsumeableData.Card1_Heading}</Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                {ConsumeableData.Card1_Description}
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
+                    <div className="card">
+                        <div className="card-content">
+                            <img src={Images.consumable1} alt="" className="card-img" />
+                            <h1 className="card-title">{ConsumeableData.Card1_Heading}</h1>
+                            <div className="card-body">
+                                <p className="card-price">{ConsumeableData.Card1_Description}</p>
+                            </div>
                             <Link to='/Services'>
-                                <Button size="small" variant="contained" color='success'>LEARN MORE</Button>
+                                <div className="card-footer">
+                                    <button className="btn btn-border">Learn More</button>
+                                </div>
                             </Link>
-                        </CardActions>
-                    </Card>
+                        </div>
+                    </div>
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
-                    <Card sx={{ maxWidth: 345 }}>
-                        <CardMedia component="img" alt="Consumable 2" height="250" image={Images.consumable2} />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" sx={{ fontWeight: '600' }}>{ConsumeableData.Card2_Heading}</Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                {ConsumeableData.Card2_Description}
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
+                    <div className="card">
+                        <div className="card-content">
+                            <img src={Images.consumable2} alt="" className="card-img" />
+                            <h1 className="card-title">{ConsumeableData.Card2_Heading}</h1>
+                            <div className="card-body">
+                                <p className="card-price">{ConsumeableData.Card2_Description}</p>
+                            </div>
                             <Link to='/Services'>
-                                <Button size="small" variant="contained" color='success'>LEARN MORE</Button>
+                                <div className="card-footer">
+                                    <button className="btn btn-border">Learn More</button>
+                                </div>
                             </Link>
-                        </CardActions>
-                    </Card>
+                        </div>
+                    </div>
                 </Grid>
                 <Grid item xs={12} sm={6} md={4}>
-                    <Card sx={{ maxWidth: 345 }}>
-                        <CardMedia component="img" alt="Consumable 3" height="250" image={Images.consumable3} />
-                        <CardContent>
-                            <Typography gutterBottom variant="h6" sx={{ fontWeight: '600' }}>{ConsumeableData.Card3_Heading}</Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                {ConsumeableData.Card3_Description}
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
+                    <div className="card">
+                        <div className="card-content">
+                            <img src={Images.consumable3} alt="" className="card-img" />
+                            <h1 className="card-title">{ConsumeableData.Card3_Heading}</h1>
+                            <div className="card-body">
+                                <p className="card-price">{ConsumeableData.Card3_Description}</p>
+                            </div>
                             <Link to='/Services'>
-                                <Button size="small" variant="contained" color='success'>LEARN MORE</Button>
+                                <div className="card-footer">
+                                    <button className="btn btn-border">Learn More</button>
+                                </div>
                             </Link>
-                        </CardActions>
-                    </Card>
+                        </div>
+                    </div>
                 </Grid>
             </Grid>
         </Grid>
